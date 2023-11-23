@@ -1,0 +1,163 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --cor-fundo : #FFFFFF;
+    --cor-hover : #000080;
+    --cor-primaria : #000000;
+    --cor-footer : #454647;
+}
+
+.container{
+    max-width: 1200px;
+    padding: 2%;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu ul{
+    list-style-type: none;
+    padding: 0%;
+}
+
+.menu ul{
+    background-color: var(--cor-fundo);
+}
+
+.menu ul li{
+    display: inline-block;
+    position: relative;
+}
+
+.menu ul li a{
+    color: var(--cor-primaria);
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+}
+
+.menu ul li a:hover{
+    color: var(--cor-fundo);
+    background-color: var(--cor-hover);
+}
+
+.menu ul ul{
+    display: none;
+    position: absolute;
+}
+
+.menu ul li:hover ul{
+    display: block;
+}
+
+.menu ul ul li a{
+    background-color: var(--cor-hover);
+    display: block;
+    color: var(--cor-fundo);
+}
+
+.menu ul ul li:hover ul{
+    display: block;
+}
+
+.menu ul ul ul{
+    width: 200px;
+}
+
+.menu ul ul ul li a{
+    background-color: var(--cor-hover);
+    display: block;
+    color: var(--cor-fundo);
+}
+
+.teste{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.texto{
+    gap: 10px;
+}
+
+.destaques{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.destaques_alinhamento{
+    max-width: 190px;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer{
+    padding: 2%;
+    background-color: var(--cor-footer);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.menu_footer ul{
+    list-style-type: none;
+    padding: 0%;
+}
+
+.menu_footer ul{
+    background-color: var(--cor-footer);
+}
+
+.menu_footer ul li{
+    display: inline-block;
+    position: relative;
+}
+
+.menu_footer ul li a{
+    color: var(--cor-fundo);
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+}
+
+.texto_rodape{
+    color: var(--cor-fundo);
+}
+
+@media screen and (max-width: 730px){
+    .header{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .teste{
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .destaques{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .teste{
+        flex-direction: column;
+        gap: 50px;
+    }
+}
+
+
